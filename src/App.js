@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import ArticleList from './ArticleList.js'
+import ArticleList from './components/ArticleList.js'
 import {articles} from './static/fixtures.js'
 
 class App extends Component {
