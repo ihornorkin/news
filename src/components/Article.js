@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Comments from './Comments';
 import PropTypes from 'prop-types';
-import toggleOpen from '../decorators/toggleOpen'
 
 class Article extends Component {
     static propTypes = {
