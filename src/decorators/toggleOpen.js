@@ -5,7 +5,7 @@ export default (OriginalComponent) => class WrappedComponent extends ReactCompon
         isOpen: false
     };
 
-    toggleOpen = (e) => {
+    toggleOpen = () => {
         this.setState({
             isOpen: !this.state.isOpen
         })
