@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import toggleOpen from '../decorators/toggleOpen';
+import toggleOpen from '../../decorators/toggleOpen';
 
 class Comments extends Component {
 	render() {

@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
-import Article from './Article'
-import accordion from '../decorators/accordion';
-
+import Article from '../Article/Article'
+import accordion from '../../decorators/accordion';
+import {connect} from 'react-redux';
 
 class ArticleList extends Component {
 
     render() {
-        const {article, openItemId, toggleOpenItem} = this.props;
-        const articleElemets = article.map((article) => <li key={article.id}>
+        const {articles, openItemId, toggleOpenItem} = this.props;
+        const articleElemets = articles.map((article) => <li key={article.id}>
             <Article
                 article={article}
                 isOpen = {article.id === openItemId}
@@ -23,4 +23,6 @@ class ArticleList extends Component {
     }
 }
 
-export default accordion(ArticleList);
+export default connect((state) => ({
+    articles: state.articles
+}))(accordion(ArticleList));

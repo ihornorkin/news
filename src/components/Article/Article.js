@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Comments from './Comments';
+import Comments from '../Components/Comments';
 import PropTypes from 'prop-types';
 
 class Article extends Component {
@@ -14,9 +14,14 @@ class Article extends Component {
                 <h2>{article.title}</h2>
                 {this.getText()}
                 <button onClick={toggleOpen}>{isOpen ? 'close' : 'open'}</button>
+                <button onClick={this.handleDelete}>Delete</button>
             </div>
         )
     }
+
+    handleDelete = () => {
+      console.log('delete');
+    };
 
     getText() {
         const {article, isOpen} = this.props;
